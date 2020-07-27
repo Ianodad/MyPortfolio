@@ -20,7 +20,7 @@ export default () => (
               repository
               website
               image {
-                childImageSharp{
+                childImageSharp {
                     sizes(maxWidth: 590) {
                         ...GatsbyImageSharpSizes
                     }

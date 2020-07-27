@@ -29,9 +29,9 @@ const Header = ({ siteTitle }) => (
       
       
       <div className="icons-container">
-            {/* <a href="mailto:someone@yoursite.com">
+            <a href="ianodad@gmail.com">
               <MailSVG />
-            </a> */}
+            </a>
 
             <a href="https://www.instagram.com/ianodad/">
               <InstagramSVG />
