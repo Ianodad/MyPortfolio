@@ -1,14 +1,15 @@
-import React from "react"
+/* eslint-disable linebreak-style */
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
 
-import Header from "../components/header"
-import Bio from "../components/Bio"
+import Header from './header';
+import Bio from './Bio';
 
-
-const About = () =>  (
+const About = () => (
   <div className="about-container">
     <Header />
-    <Bio /> 
+    <Bio />
   </div>
-)
+);
 
-export default About
+export default About;
