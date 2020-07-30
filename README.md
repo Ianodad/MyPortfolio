@@ -1,10 +1,10 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <h1 align="center">
-  Keturah - Portfolio Site
+  My Profolio
 </h1>
 
 ## 👁 Demo
-https://keturah.netlify.com/
+https://portfolio.ianodad.vercel.app/
 
 ## 🚀 Running for Development
 
@@ -79,3 +79,5 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+## License
+MIT (c) 2018 [Ian Odhiambo](https://github.com/ianodad)
