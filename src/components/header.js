@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => {
   //     marginBottom: `1.45rem`,
   //   }}
   // >
-  const [width, setWidth] = useState(1000);
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
