@@ -3,6 +3,8 @@ import SEO from '../components/seo';
 
 import Nav from '../components/Nav';
 import AboutPage from '../components/AboutPage';
+import { Location } from '@reach/router';
+
 
 class About extends Component {
   constructor() {
@@ -40,11 +42,14 @@ class About extends Component {
       }
 
       return (
+        <Location>{({ navigate, location }) => (
           <div className="about-page">
             <SEO title="About" />
-            <Nav />
+            <Nav path={location} />
             <AboutPage />
           </div>
+          )}
+      </Location>
       );
     };
 

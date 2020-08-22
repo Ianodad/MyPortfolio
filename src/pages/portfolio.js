@@ -4,6 +4,7 @@ import SEO from '../components/seo';
 import Nav from '../components/Nav';
 import Main from '../components/Main';
 
+import { Location } from '@reach/router';
 class PortfolioPage extends Component {
   constructor() {
     super();
@@ -40,11 +41,14 @@ class PortfolioPage extends Component {
       }
 
       return (
+        <Location>{({ navigate, location }) => (
           <div className="portfolio-page">
             <SEO title="Portfolio" />
-            <Nav />
+            <Nav path={location} />
             <Main />
           </div>
+          )}
+      </Location>
       );
     };
 

@@ -3,6 +3,8 @@ import SEO from '../components/seo';
 
 import Nav from '../components/Nav';
 import BlogMain from '../components/blogMain';
+import { Location } from '@reach/router';
+
 
 class blog extends Component {
   constructor() {
@@ -39,11 +41,14 @@ class blog extends Component {
         );
       }
       return (
+         <Location>{({ navigate, location }) => (
           <div className="portfolio-page">
             <SEO title="blog" />
-            <Nav />
+              <Nav path={location} />
             <BlogMain />
           </div>
+            )}
+      </Location>
       );
     };
 

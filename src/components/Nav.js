@@ -24,7 +24,11 @@ class Nav extends React.Component {
   }
 
   componentDidMount() {
-    if (window.location.href.includes('portfolio')) {
+    // console.log(window.location.pathname)
+    // console.log(window.location.href.includes('portfolio'))
+    const {pathname}= this.props.path
+    // console.log(pathname)
+    if (pathname == "/portfolio") {
       this.setState({
         portfolio_active: true,
         about_active: false,
@@ -34,7 +38,7 @@ class Nav extends React.Component {
         portfolio_classname: 'clicked-file',
         blog_classname: 'unclicked-file',
       });
-    } else if (window.location.href.includes('about')) {
+    } else if (pathname == "/about") {
       this.setState({
         portfolio_active: false,
         about_active: true,
@@ -44,7 +48,7 @@ class Nav extends React.Component {
         portfolio_classname: 'unclicked-file',
         blog_classname: 'unclicked-file',
       });
-    } else if (window.location.href.includes('blog')) {
+    } else if (pathname == "/blog") {
       this.setState({
         portfolio_active: false,
         about_active: false,
@@ -58,6 +62,7 @@ class Nav extends React.Component {
   }
 
   render() {
+    
     const {
       index_classname,
       portfolio_classname,
