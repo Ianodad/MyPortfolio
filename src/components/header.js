@@ -1,20 +1,42 @@
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import InstagramSVG from '../Icons/InstagramSVG';
 import LinkedInSVG from '../Icons/LinkedInSVG';
 import MailSVG from '../Icons/MailSVG';
 import GithubSVG from '../Icons/GithubSVG';
+import Menu from './Menu';
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }) => {
+  
   // <header
   //   style={{
   //     background: `rebeccapurple`,
   //     marginBottom: `1.45rem`,
   //   }}
   // >
+  const [width, setWidth] = useState('');
+
+  // useEffect(() => {
+ 
+  //   // eslint-disable-next-line no-use-before-define
+  //   updateWindowDimensions();
+
+  // }, [])
+
+  // const updateWindowDimensions = () => {
+  //   const { width } = document.body.getBoundingClientRect();
+  //   setWidth({width});
+  // }
+
+  return (
   <div className="header-container">
+
+    { window.innerWidth < 800 &&
+      <Menu/>
+    }
+
     <div className="user-info-container">
       <div className="user-info">
         <p>Ian Adera</p>
@@ -53,7 +75,7 @@ const Header = ({ siteTitle }) => (
   </div>
 
   // </header>
-);
+ )};
 
 // Header.propTypes = {
 //   siteTitle: PropTypes.string,

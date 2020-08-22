@@ -1,55 +1,59 @@
-import React, { Component } from "react"
-import SEO from "../components/seo"
+import React, { Component } from 'react';
+import SEO from '../components/seo';
 
-import Nav from "../components/Nav"
-import AboutPage from "../components/AboutPage"
-
+import Nav from '../components/Nav';
+import AboutPage from '../components/AboutPage';
 
 class About extends Component {
   constructor() {
     super();
     this.state = {
-      navToggle: false
-    }
+      width: '',
+    };
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+  window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({ width: window.innerWidth });
   }
   
-  componentDidMount() {
-    if(window.screen.availWidth < 800) {
-      this.setState({ navToggle: true })
-    }
-    else {
-      this.setState({ navToggle: false })
-    }
-  }
   
   render() {
     const toggler = () => {
-      if(this.state.navToggle === true) {
-        return(
+      const { width } = this.state;
+      if (width < 800) {
+        return (
+          // eslint-disable-next-line react/jsx-filename-extension
           <div className="about-page">
             <SEO title="About" />
             <AboutPage />
           </div>
         );
       }
-      else {
-        return(
+
+      return (
           <div className="about-page">
             <SEO title="About" />
             <Nav />
             <AboutPage />
           </div>
-        );
-      }
-    }
-    
+      );
+    };
+
     return (
       <div className="about-page-container">
         {toggler()}
       </div>
-    )
+    );
   }
 }
-
 
 export default About;

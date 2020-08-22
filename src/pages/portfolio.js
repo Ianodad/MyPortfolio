@@ -1,54 +1,59 @@
-import React, { Component } from "react"
-import SEO from "../components/seo"
+import React, { Component } from 'react';
+import SEO from '../components/seo';
 
-import Nav from "../components/Nav"
-import Main from "../components/Main"
+import Nav from '../components/Nav';
+import Main from '../components/Main';
 
 class PortfolioPage extends Component {
   constructor() {
     super();
     this.state = {
-      navToggle: false
-    }
+      width: '',
+    };
   }
-  
+
   componentDidMount() {
-    if(window.screen.availWidth < 800) {
-      this.setState({ navToggle: true })
-    }
-    else {
-      this.setState({ navToggle: false })
-    }
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
   }
-  
+
+  componentWillUnmount() {
+  window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({ width: window.innerWidth });
+  }
+
   render() {
     const toggler = () => {
-      if(this.state.navToggle === true) {
-        return(
+      const { width } = this.state;
+
+      if (width < 800) {
+        return (
+          // eslint-disable-next-line react/jsx-filename-extension
           <div className="portfolio-page">
             <SEO title="Portfolio" />
             <Main />
           </div>
         );
       }
-      else {
-        return(
+
+      return (
           <div className="portfolio-page">
             <SEO title="Portfolio" />
             <Nav />
             <Main />
           </div>
-        );
-      }
-    }
-    
+      );
+    };
+
     return (
       <div className="portfolio-page-container">
         {toggler()}
       </div>
-    )
+    );
   }
 }
-
 
 export default PortfolioPage;

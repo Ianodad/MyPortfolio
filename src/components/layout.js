@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 
 // import Header from "./header"
-import "./layout.css"
+import "../css/layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

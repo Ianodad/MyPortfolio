@@ -1,17 +1,17 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
-import Terminal from "../components/Terminal"
+import Terminal from '../components/Terminal';
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <Terminal data={data.terminal}/>
   </Layout>
-)
+);
 
 export default IndexPage;
 
