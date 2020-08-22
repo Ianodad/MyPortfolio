@@ -18,22 +18,22 @@ const Header = ({ siteTitle }) => {
   // >
   const [width, setWidth] = useState('');
 
-  // useEffect(() => {
- 
-  //   // eslint-disable-next-line no-use-before-define
-  //   updateWindowDimensions();
+  useEffect(() => {
+    // eslint-disable-next-line no-use-before-define
+    const updateWindowDimensions = () => {
+      // eslint-disable-next-line no-shadow
+      const { width } = document.body.getBoundingClientRect();
+      setWidth(width);
+    };
+    window.addEventListener('resize', updateWindowDimensions);
 
-  // }, [])
-
-  // const updateWindowDimensions = () => {
-  //   const { width } = document.body.getBoundingClientRect();
-  //   setWidth({width});
-  // }
+    return () => window.removeEventListener('resize', updateWindowDimensions);
+  }, []);
 
   return (
   <div className="header-container">
 
-    { window.innerWidth < 800 &&
+    { width < 800 &&
       <Menu/>
     }
 

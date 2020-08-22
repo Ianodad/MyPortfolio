@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Lato:300,400,700');
 
+.select {
+	background: #ffffff06;
+	color: #adf;
+}
 /* Appearance */
 .links {
 	background-color:#191920;
