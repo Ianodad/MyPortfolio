@@ -35,7 +35,6 @@ const Header = ({ siteTitle }) => {
   }, [width]);
 
   
-  console.log(document.documentElement.clientWidth)
   return (
   <div className="header-container">
 
