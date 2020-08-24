@@ -3,7 +3,34 @@
 .select {
 	background: #ffffff06;
 	color: #adf;
+	border-bottom: 5px solid #68a
+
 }
+
+.index_classname {
+	background: #ffffff06;
+	color: #adf;
+	border-bottom: 5px solid #68a
+}
+
+.about_classname {
+	background: #ffffff06;
+	color: #adf;
+	border-bottom: 5px solid #68a
+}
+
+.portfolio_classname {
+	background: #ffffff06;
+	color: #adf;
+	border-bottom: 5px solid #68a
+}	
+
+.blog_classname {
+	background: #ffffff06;
+	color: #adf;
+	border-bottom: 5px solid #68a
+}
+
 /* Appearance */
 .links {
 	background-color:#191920;

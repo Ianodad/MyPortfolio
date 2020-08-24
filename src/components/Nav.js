@@ -23,7 +23,7 @@ class Nav extends React.Component {
     };
   }
 
-  componentDidMount() {
+    componentDidMount() {
     // console.log(window.location.pathname)
     // console.log(window.location.href.includes('portfolio'))
     const {pathname}= this.props.path

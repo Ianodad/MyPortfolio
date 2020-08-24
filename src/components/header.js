@@ -8,6 +8,9 @@ import MailSVG from '../Icons/MailSVG';
 import GithubSVG from '../Icons/GithubSVG';
 import Menu from './Menu';
 
+import { Location } from '@reach/router';
+
+
 const Header = ({ siteTitle }) => {
   
   // <header
@@ -16,7 +19,8 @@ const Header = ({ siteTitle }) => {
   //     marginBottom: `1.45rem`,
   //   }}
   // >
-  const [width, setWidth] = useState('');
+  
+  const [width, setWidth] = useState();
 
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
@@ -34,7 +38,11 @@ const Header = ({ siteTitle }) => {
   <div className="header-container">
 
     { width < 800 &&
-      <Menu/>
+    <Location>{({ navigate, location }) => (
+        <Menu path={location}/>
+      )}
+     </Location>
+
     }
 
     <div className="user-info-container">
