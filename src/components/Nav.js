@@ -13,13 +13,13 @@ class Nav extends React.Component {
   constructor() {
     super();
     this.state = {
-      portfolio_active: true,
-      about_active: false,
+      portfolio_active: false,
+      about_active: true,
       blog_active: false,
-      index_classname: '',
-      about_classname: '',
-      portfolio_classname: '',
-      blog_classname: '',
+      index_classname: 'unclicked-file',
+      about_classname: 'clicked-file',
+      portfolio_classname: 'unclicked-file',
+      blog_classname: 'unclicked-file',
     };
   }
 
