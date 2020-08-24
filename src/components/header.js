@@ -20,7 +20,7 @@ const Header = ({ siteTitle }) => {
   //   }}
   // >
   
-  const [width, setWidth] = useState(document.documentElement.clientWidth);
+  const [width, setWidth] = useState('');
 
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
@@ -34,17 +34,25 @@ const Header = ({ siteTitle }) => {
     return () => window.removeEventListener('resize', updateWindowDimensions);
   }, [width]);
 
+  
   console.log(document.documentElement.clientWidth)
   return (
   <div className="header-container">
 
-    { width < 800 &&
+    { width < 800 && width != ''  ? (
+        <Menu path={location}/>
+      ) : (
+        <div></div>
+      )
+     }
+
+    {/* { width < 800 &&
     <Location>{({ navigate, location }) => (
         <Menu path={location}/>
       )}
      </Location>
 
-    }
+    } */}
 
     <div className="user-info-container">
       <div className="user-info">
