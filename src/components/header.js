@@ -20,7 +20,7 @@ const Header = ({ siteTitle }) => {
   //   }}
   // >
   
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(document.documentElement.clientWidth);
 
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
