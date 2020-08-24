@@ -16,10 +16,10 @@ class Nav extends React.Component {
       portfolio_active: true,
       about_active: false,
       blog_active: false,
-      index_classname: 'unclicked-file',
-      about_classname: 'unclicked-file',
-      portfolio_classname: 'clicked-file',
-      blog_classname: 'unclicked-file',
+      index_classname: '',
+      about_classname: '',
+      portfolio_classname: '',
+      blog_classname: '',
     };
   }
 
