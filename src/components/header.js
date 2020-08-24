@@ -34,6 +34,7 @@ const Header = ({ siteTitle }) => {
     return () => window.removeEventListener('resize', updateWindowDimensions);
   }, [width]);
 
+  console.log(document.documentElement.clientWidth)
   return (
   <div className="header-container">
 
